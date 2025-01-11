@@ -33,6 +33,7 @@ RUN apk add --no-cache \
     php84-mysqli \
     php84-opcache \
     php84-openssl \
+    php84-pecl-xdebug \
     php84-phar \
     php84-session \
     php84-tokenizer \
@@ -49,6 +50,7 @@ COPY config/conf.d /etc/nginx/conf.d/
 ENV PHP_INI_DIR=/etc/php84
 COPY config/fpm-pool.conf ${PHP_INI_DIR}/php-fpm.d/www.conf
 COPY config/php.ini ${PHP_INI_DIR}/conf.d/custom.ini
+COPY config/99-xdebug.ini /etc/php84/conf.d/99-xdebug.ini
 RUN if [ ! -f /usr/bin/php ]; then ln -s /usr/bin/php84 /usr/bin/php; fi
 
 # Supervisor
