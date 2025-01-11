@@ -19,8 +19,8 @@ jobs:
 
     env:
       # Replace special characters in ref_name
-      IMAGE: "mysticeragames/cms:base-dev-$( echo ${{ github.ref_name }} | sed 's|[^a-zA-Z0-9\\.\\-\\_]|-|g' )"
-      IMAGE_RELEASE: mysticeragames/cms:base-${{ github.event.release.name }}
+      IMAGE: "mysticeragames/makeitstatic-cms:base-dev-$( echo ${{ github.ref_name }} | sed 's|[^a-zA-Z0-9\\.\\-\\_]|-|g' )"
+      IMAGE_RELEASE: mysticeragames/makeitstatic-cms:base-${{ github.event.release.name }}
 
 
     steps:
