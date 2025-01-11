@@ -74,7 +74,7 @@ jobs:
 
 
     - if: ${{ inputs.IS_RELEASE == 'true' }}
-      name: Docker push latest
+      name: Docker push release
       run: |
         docker tag ${{ env.IMAGE }} ${{ env.IMAGE_RELEASE }}
         docker push ${{ env.IMAGE_RELEASE }}
