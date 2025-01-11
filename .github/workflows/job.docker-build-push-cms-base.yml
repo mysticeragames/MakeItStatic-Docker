@@ -5,10 +5,6 @@ on:
     secrets:
       DOCKER_TOKEN:
         required: true
-    inputs:
-      IS_RELEASE:
-        type: boolean
-        default: false
 
 jobs:
   build:
@@ -20,7 +16,7 @@ jobs:
     env:
       # Replace special characters in ref_name
       IMAGE: "mysticeragames/makeitstatic-cms:base-dev-$( echo ${{ github.ref_name }} | sed 's|[^a-zA-Z0-9\\.\\-\\_]|-|g' )"
-      IMAGE_RELEASE: mysticeragames/makeitstatic-cms:base-${{ github.event.release.name }}
+      IMAGE_RELEASE: "mysticeragames/makeitstatic-cms:base-$( echo ${{ github.event.release.name }} | sed 's|[^a-zA-Z0-9\\.\\-\\_]|-|g' )"
 
 
     steps:
@@ -69,12 +65,13 @@ jobs:
         docker run --rm ${{ env.IMAGE }} sh -c "${COMMANDS}" || exit 1
 
 
-    - name: Docker push
+    - if: ${{ github.event.release.name }} == ''
+      name: 'Docker push  base-dev-{ref_name}'
       run: docker push ${{ env.IMAGE }}
 
 
-    - if: ${{ inputs.IS_RELEASE == 'true' }}
-      name: Docker push release
+    - if: ${{ github.event.release.name }} != ''
+      name: 'Docker push release  base-{x.y.z}'
       run: |
         docker tag ${{ env.IMAGE }} ${{ env.IMAGE_RELEASE }}
         docker push ${{ env.IMAGE_RELEASE }}
