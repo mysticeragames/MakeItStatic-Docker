@@ -20,25 +20,25 @@ RUN apk add --no-cache \
     nginx \
     git \
     npm \
-    php83 \
-    php83-ctype \
-    php83-curl \
-    php83-dom \
-    php83-fileinfo \
-    php83-fpm \
-    php83-gd \
-    php83-iconv \
-    php83-intl \
-    php83-mbstring \
-    php83-mysqli \
-    php83-opcache \
-    php83-openssl \
-    php83-phar \
-    php83-session \
-    php83-tokenizer \
-    php83-xml \
-    php83-xmlreader \
-    php83-xmlwriter \
+    php84 \
+    php84-ctype \
+    php84-curl \
+    php84-dom \
+    php84-fileinfo \
+    php84-fpm \
+    php84-gd \
+    php84-iconv \
+    php84-intl \
+    php84-mbstring \
+    php84-mysqli \
+    php84-opcache \
+    php84-openssl \
+    php84-phar \
+    php84-session \
+    php84-tokenizer \
+    php84-xml \
+    php84-xmlreader \
+    php84-xmlwriter \
     supervisor
 
 # Nginx
@@ -46,10 +46,10 @@ COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/conf.d /etc/nginx/conf.d/
 
 # PHP
-ENV PHP_INI_DIR=/etc/php83
+ENV PHP_INI_DIR=/etc/php84
 COPY config/fpm-pool.conf ${PHP_INI_DIR}/php-fpm.d/www.conf
 COPY config/php.ini ${PHP_INI_DIR}/conf.d/custom.ini
-RUN if [ ! -f /usr/bin/php ]; then ln -s /usr/bin/php83 /usr/bin/php; fi
+RUN if [ ! -f /usr/bin/php ]; then ln -s /usr/bin/php84 /usr/bin/php; fi
 
 # Supervisor
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
