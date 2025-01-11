@@ -2,6 +2,10 @@
 ARG ALPINE_VERSION=3.21.1
 FROM alpine:${ALPINE_VERSION}
 
+# Update
+RUN apk update && \
+    apk upgrade -a
+
 # Set working directory
 WORKDIR /var/www/html
 
