@@ -7,8 +7,9 @@ on:
         required: true
     inputs:
       IS_RELEASE:
-        type: boolean
-        default: false
+        type: string
+        default: 'false'
+        required: true
 
 jobs:
   build:
@@ -69,7 +70,8 @@ jobs:
         docker run --rm ${{ env.IMAGE }} sh -c "${COMMANDS}" || exit 1
 
 
-    - name: Docker push
+    - if: ${{ inputs.IS_RELEASE == 'false' }}
+      name: Docker push
       run: docker push ${{ env.IMAGE }}
 
 
