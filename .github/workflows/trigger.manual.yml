@@ -1,0 +1,14 @@
+name: '[trigger.manual] Build+push cms-base'
+
+on:
+  workflow_dispatch:
+
+
+
+jobs:
+  docker-build-push-cms-base:
+    uses: ./.github/workflows/job.docker-build-push-cms-base.yml
+    with:
+      IS_RELEASE: false
+    secrets:
+      DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
