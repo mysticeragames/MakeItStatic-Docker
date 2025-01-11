@@ -36,6 +36,7 @@ RUN apk add --no-cache \
     php84-pecl-xdebug \
     php84-phar \
     php84-session \
+    php84-simplexml \
     php84-tokenizer \
     php84-xml \
     php84-xmlreader \
