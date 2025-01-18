@@ -7,11 +7,18 @@ on:
 
 jobs:
   docker-build-push-cms-base:
-    uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image-makeitstatic-cms-base.yml@main
+    uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image.yml@main
     permissions:
       contents: read
     with:
       PUSH: 'false'
       RELEASE: 'false'
+      TARGET_IMAGE: 'mysticeragames/makeitstatic-cms-base'
     secrets:
-      DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  lint-github-actions:
+    uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.lint-github-action.yml@main
+    permissions:
+      contents: read
