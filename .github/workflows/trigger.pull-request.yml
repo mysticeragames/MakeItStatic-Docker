@@ -17,3 +17,8 @@ jobs:
     secrets:
       DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  lint-github-actions:
+    uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.lint-github-action.yml@main
+    permissions:
+      contents: read
