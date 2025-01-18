@@ -2,10 +2,6 @@
 #ARG ALPINE_VERSION=3.21.1 # This is not getting picked up by dependabot, so use hardcoded:
 FROM alpine:3.21.1
 
-# Update
-RUN apk update && \
-    apk upgrade -a
-
 # Set working directory
 WORKDIR /var/www/html
 
@@ -15,33 +11,33 @@ RUN addgroup -g 1000 cmsg && \
 
 # Install packages
 RUN apk add --no-cache \
-    bash \
-    curl \
-    nginx \
-    git \
-    npm \
-    php84 \
-    php84-ctype \
-    php84-curl \
-    php84-dom \
-    php84-fileinfo \
-    php84-fpm \
-    php84-gd \
-    php84-iconv \
-    php84-intl \
-    php84-mbstring \
-    php84-mysqli \
-    php84-opcache \
-    php84-openssl \
-    php84-pecl-xdebug \
-    php84-phar \
-    php84-session \
-    php84-simplexml \
-    php84-tokenizer \
-    php84-xml \
-    php84-xmlreader \
-    php84-xmlwriter \
-    supervisor
+    bash==5.2.37-r0 \
+    curl==8.11.1-r0 \
+    nginx==1.26.2-r4 \
+    git==2.47.2-r0 \
+    npm==10.9.1-r0 \
+    php84==8.4.3-r0 \
+    php84-ctype==8.4.3-r0 \
+    php84-curl==8.4.3-r0 \
+    php84-dom==8.4.3-r0 \
+    php84-fileinfo==8.4.3-r0 \
+    php84-fpm==8.4.3-r0 \
+    php84-gd==8.4.3-r0 \
+    php84-iconv==8.4.3-r0 \
+    php84-intl==8.4.3-r0 \
+    php84-mbstring==8.4.3-r0 \
+    php84-mysqli==8.4.3-r0 \
+    php84-opcache==8.4.3-r0 \
+    php84-openssl==8.4.3-r0 \
+    php84-pecl-xdebug==3.4.1-r0 \
+    php84-phar==r0 x86_64 \
+    php84-session==r0 x86_64 \
+    php84-simplexml==8.4.3-r0 \
+    php84-tokenizer==8.4.3-r0 \
+    php84-xml==8.4.3-r0 \
+    php84-xmlreader==8.4.3-r0 \
+    php84-xmlwriter==8.4.3-r0 \
+    supervisor==4.2.5-r5
 
 # Nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
