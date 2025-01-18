@@ -44,3 +44,4 @@ docker run --rm mysticeragames/makeitstatic-cms-base:0.1.4 apk list --installed 
 # or:
 docker run --rm mysticeragames/makeitstatic-cms-base:0.1.4 apk list --installed php84*
 ```
+
