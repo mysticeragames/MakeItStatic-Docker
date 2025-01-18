@@ -11,23 +11,22 @@ RUN addgroup -g 1000 cmsg && \
 
 # Install packages
 RUN apk add --no-cache \
-    bash==5.2.37-r0 \
-    curl==8.11.1-r0 \
+    # bash==5.2.37-r0 \
+    # curl==8.11.1-r0 \
     nginx==1.26.2-r4 \
     git==2.47.2-r0 \
-    npm==10.9.1-r0 \
+    # npm==10.9.1-r0 \
     php84==8.4.3-r0 \
     php84-ctype==8.4.3-r0 \
-    php84-curl==8.4.3-r0 \
+    # php84-curl==8.4.3-r0 \
     php84-dom==8.4.3-r0 \
-    php84-fileinfo==8.4.3-r0 \
-    php84-fpm==8.4.3-r0 \
-    php84-gd==8.4.3-r0 \
+    # php84-fileinfo==8.4.3-r0 \
+    # php84-fpm==8.4.3-r0 \
+    # php84-gd==8.4.3-r0 \
     php84-iconv==8.4.3-r0 \
-    php84-intl==8.4.3-r0 \
+    # php84-intl==8.4.3-r0 \
     php84-mbstring==8.4.3-r0 \
-    php84-mysqli==8.4.3-r0 \
-    php84-opcache==8.4.3-r0 \
+    # php84-opcache==8.4.3-r0 \
     php84-openssl==8.4.3-r0 \
     php84-pecl-xdebug==3.4.1-r0 \
     php84-phar==8.4.3-r0 \
@@ -35,7 +34,7 @@ RUN apk add --no-cache \
     php84-simplexml==8.4.3-r0 \
     php84-tokenizer==8.4.3-r0 \
     php84-xml==8.4.3-r0 \
-    php84-xmlreader==8.4.3-r0 \
+    # php84-xmlreader==8.4.3-r0 \
     php84-xmlwriter==8.4.3-r0 \
     supervisor==4.2.5-r5
 
