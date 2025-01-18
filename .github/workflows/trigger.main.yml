@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
   docker-build-push-cms-base:
     uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image-makeitstatic-cms-base.yml@main
+    permissions:
+      contents: read
     with:
       PUSH: 'true'
       RELEASE: 'false'
