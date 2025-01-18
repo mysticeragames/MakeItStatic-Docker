@@ -8,7 +8,10 @@ on:
 jobs:
   docker-build-push-cms-base:
     uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image-makeitstatic-cms-base.yml@main
+    permissions:
+      contents: read
     with:
-      IS_RELEASE: 'true'
+      PUSH: 'false'
+      RELEASE: 'true'
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
