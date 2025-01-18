@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker-build-push-cms-base:
-    uses: ./.github/workflows/job.docker-build-push-cms-base.yml
+    uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image-makeitstatic-cms-base.yml@main
     with:
       IS_RELEASE: 'true'
     secrets:
