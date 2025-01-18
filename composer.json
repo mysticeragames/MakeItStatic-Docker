@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "git-prune": [
+            "git branch -a",
+            "git fetch --prune",
+            "git branch | grep -v \"main\" | xargs git branch -d || true",
+            "git branch -a"
+        ],
+        "git-remove-local-commits-reset-to-upstream": [
+            "git reset --hard @{u}"
+        ]
+    }
+}
