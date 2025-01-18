@@ -39,6 +39,7 @@ RUN apk add --no-cache \
     php84-xmlwriter==8.4.3-r0 \
     supervisor==4.2.5-r5
 
+
 # Nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/conf.d /etc/nginx/conf.d/

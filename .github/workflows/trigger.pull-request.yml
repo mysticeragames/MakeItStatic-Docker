@@ -1,7 +1,7 @@
-name: '[trigger.manual] Build+push cms-base'
+name: '[trigger.pull-request]'
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 
 
@@ -9,7 +9,7 @@ jobs:
   docker-build-push-cms-base:
     uses: mysticeragames/MakeItStatic-CI/.github/workflows/job.docker-image-makeitstatic-cms-base.yml@main
     with:
-      PUSH: 'true'
+      PUSH: 'false'
       RELEASE: 'false'
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
