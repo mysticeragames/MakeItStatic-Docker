@@ -8,10 +8,17 @@ Base Docker image for [MakeItStatic-CMS](https://github.com/mysticeragames/MakeI
 
 ## Docker Hub
 
-- https://hub.docker.com/r/mysticeragames/makeitstatic-cms/tags?name=base-
+- https://hub.docker.com/r/mysticeragames/makeitstatic-cms-base/tags
 
 ## Build & Test locally
 
 ```bash
+# if needed: get a frech clone:
+rm -rf ./cloned-cms-test; ./clone_cms.sh
+
+# build & run phpunit tests
 ./build_test.sh
+
+# see coverage (optional)
+./coverage.sh
 ```
