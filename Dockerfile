@@ -30,15 +30,14 @@ RUN apk add --no-cache \
     php84-opcache==8.4.3-r0 \
     php84-openssl==8.4.3-r0 \
     php84-pecl-xdebug==3.4.1-r0 \
-    php84-phar==r0 x86_64 \
-    php84-session==r0 x86_64 \
+    php84-phar==8.4.3-r0 \
+    php84-session==8.4.3-r0 \
     php84-simplexml==8.4.3-r0 \
     php84-tokenizer==8.4.3-r0 \
     php84-xml==8.4.3-r0 \
     php84-xmlreader==8.4.3-r0 \
     php84-xmlwriter==8.4.3-r0 \
     supervisor==4.2.5-r5
-
 
 # Nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
