@@ -25,3 +25,13 @@ rm -rf ./cloned-cms-test; ./clone_cms.sh
 ./coverage.sh
 ```
 
+## Locate installed versions
+
+https://pkgs.alpinelinux.org/packages?name=php84-ctype
+
+```bash
+docker run --rm mysticeragames/makeitstatic-cms-base:0.1.4 apk list --installed php84-ctype
+
+# or:
+docker run --rm mysticeragames/makeitstatic-cms-base:0.1.4 apk list --installed php84*
+```
