@@ -22,3 +22,4 @@ rm -rf ./cloned-cms-test; ./clone_cms.sh
 # see coverage (optional)
 ./coverage.sh
 ```
+
