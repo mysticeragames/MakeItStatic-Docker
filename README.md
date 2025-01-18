@@ -2,10 +2,19 @@
 
 Base Docker image for [MakeItStatic-CMS](https://github.com/mysticeragames/MakeItStatic-CMS)
 
-[![GitHub Release](https://img.shields.io/github/v/release/mysticeragames/MakeItStatic-Docker?sort=semver&label=Release)](https://github.com/mysticeragames/MakeItStatic-Docker/releases/latest)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mysticeragames/MakeItStatic-Docker/trigger.release.yml?label=Docker%20Release)](https://github.com/mysticeragames/MakeItStatic-Docker/actions/workflows/trigger.release.yml)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mysticeragames/MakeItStatic-Docker/trigger.main.yml?branch=main&label=Docker%20Development%20(dev-main))](https://github.com/mysticeragames/MakeItStatic-Docker/actions/workflows/trigger.main.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mysticeragames/makeitstatic-cms-base?label=Docker%20Pulls%20(cms-base))](https://hub.docker.com/r/mysticeragames/makeitstatic-cms-base/tags)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mysticeragames/makeitstatic-docker/trigger.release.yml)](https://github.com/mysticeragames/makeitstatic-docker/actions/workflows/trigger.release.yml)
+[![GitHub Release Date](https://img.shields.io/github/release-date/mysticeragames/makeitstatic-docker)
+](https://github.com/mysticeragames/makeitstatic-docker/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/mysticeragames/makeitstatic-docker?sort=semver)](https://github.com/mysticeragames/makeitstatic-docker/releases/latest)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/mysticeragames/makeitstatic-cms-base/latest)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mysticeragames/makeitstatic-cms-base)](https://hub.docker.com/r/mysticeragames/makeitstatic-cms-base/tags)
+![GitHub License](https://img.shields.io/github/license/mysticeragames/makeitstatic-cms)
+
+## Development
+
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/mysticeragames/makeitstatic-docker/trigger.main.yml?branch=main&label=build%20(dev-main))](https://github.com/mysticeragames/makeitstatic-docker/actions/workflows/trigger.main.yml)
+[![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/mysticeragames/makeitstatic-docker/latest/main)](https://github.com/mysticeragames/makeitstatic-docker/commits/main/)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/mysticeragames/makeitstatic-cms-base/dev-main)
 
 ## Related
 
