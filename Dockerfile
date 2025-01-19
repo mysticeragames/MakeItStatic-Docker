@@ -1,6 +1,6 @@
 # Set base image
 #ARG ALPINE_VERSION=3.21.1 ## Does NOT work with dependabot, so use hardcoded version
-FROM alpine:3.21.1
+FROM alpine:3.21.2
 
 # Set working directory
 WORKDIR /var/www/html
