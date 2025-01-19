@@ -21,7 +21,7 @@ RUN apk add --no-cache \
     # php84-curl==8.4.3-r0 \
     php84-dom==8.4.3-r0 \
     # php84-fileinfo==8.4.3-r0 \
-    # php84-fpm==8.4.3-r0 \
+    php84-fpm==8.4.3-r0 \
     # php84-gd==8.4.3-r0 \
     php84-iconv==8.4.3-r0 \
     # php84-intl==8.4.3-r0 \
